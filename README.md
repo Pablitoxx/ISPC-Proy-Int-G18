@@ -1,1 +1,1 @@
-# ISPC-Proy-Int--G18
+# ISPC-Proyecto Integrador-G18
