@@ -2,7 +2,7 @@
 
 Integrantes
 
-Ignacio Bressanini             DNI:                               nachobressanini1@gmail.com
+Ignacio Bressanini             DNI:       42304213                        nachobressanini1@gmail.com     https://github.com/NachoBressanini
 Maria Soledad Caudana          DNI:                               soledad.caudana@gmail.com
 Santiago Luesma                DNI:                               luesma.dev@gmail.com
 Pablo Ocaño                    DNI: 33222799                      pabblloocanno@gmail.com                    linkGithub: https://github.com/Pablitoxx 
