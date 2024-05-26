@@ -7,3 +7,9 @@
 | Santiago Luesma      |           | luesma.dev@gmail.com          |                                                        |
 | Pablo Ocaño          | 33222799  | pabblloocanno@gmail.com       | https://github.com/Pablitoxx                           |
 | Fernando Pajon       | 34246659  | fernandopajon06@gmail.com     |                                                        |
+
+## Proyecto: 
+
+## Descripción:
+
+## Análisis y Diseño del Proyecto: 
