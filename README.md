@@ -119,7 +119,10 @@ Algoritmo menu_reserva
 			escribir "-------------------------------------"
 		Fin Segun
 	fin mientras
-FinAlgoritmo
+finalgoritmo
+
+
+https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/MenuReservaRestaurant.psc
 
 
 Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
