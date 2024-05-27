@@ -122,4 +122,7 @@ FinAlgoritmo
 
 o	Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
 
+https://github.com/Pablitoxx/ISPC-Proy-Int-G18/assets/114536477/b3524bfe-40b1-4eec-8e30-a6795a868be3 
+
+
 
