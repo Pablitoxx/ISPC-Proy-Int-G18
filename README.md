@@ -119,3 +119,7 @@ Algoritmo menu_reserva
 		Fin Segun
 	fin mientras
 FinAlgoritmo
+
+o	Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
+
+
