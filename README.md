@@ -34,7 +34,6 @@ Visualización de Disponibilidad: Ver la disponibilidad de mesas en tiempo real 
 Los administradores del restaurante podrán definir y ajustar la disposición de las mesas dentro del establecimiento. Podrán marcar mesas como disponibles o no disponibles según las necesidades del restaurante (por ejemplo, para eventos especiales).
 
 ## Análisis y Diseño del Proyecto: 
-
 Algoritmo menu_reserva
 	definir cant_comensales, codigo_reserva Como Entero
 	definir fecha_reserva, hora_reserva, elim_reserva como cadena
