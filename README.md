@@ -34,6 +34,7 @@ Visualización de Disponibilidad: Ver la disponibilidad de mesas en tiempo real 
 Los administradores del restaurante podrán definir y ajustar la disposición de las mesas dentro del establecimiento. Podrán marcar mesas como disponibles o no disponibles según las necesidades del restaurante (por ejemplo, para eventos especiales).
 
 ## Análisis y Diseño del Proyecto: 
+
 Algoritmo menu_reserva
 	definir cant_comensales, codigo_reserva Como Entero
 	definir fecha_reserva, hora_reserva, elim_reserva como cadena
@@ -120,7 +121,8 @@ Algoritmo menu_reserva
 	fin mientras
 FinAlgoritmo
 
-o	Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
+
+Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
 
 https://github.com/Pablitoxx/ISPC-Proy-Int-G18/assets/114536477/b3524bfe-40b1-4eec-8e30-a6795a868be3 
 
