@@ -6,7 +6,7 @@
 | Maria Soledad Caudana| 34218771  | soledad.caudana@gmail.com     | https://github.com/sole-caudana                        |
 | Santiago Luesma      |           | luesma.dev@gmail.com          |                                                        |
 | Pablo Ocaño          | 33222799  | pabblloocanno@gmail.com       | https://github.com/Pablitoxx                           |
-| Fernando Pajon       | 34246659  | fernandopajon06@gmail.com     |                                                        |
+| Fernando Pajon       | 34246659  | fernandopajon06@gmail.com     | https://github.com/FernandoPajon                                                       |
 
 ## Proyecto: 
 
