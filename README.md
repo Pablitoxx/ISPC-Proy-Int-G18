@@ -124,12 +124,12 @@ finalgoritmo
 https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/MenuReservaRestaurant.psc
 
 
-##Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
+## Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
 
 https://github.com/Pablitoxx/ISPC-Proy-Int-G18/assets/114536477/b3524bfe-40b1-4eec-8e30-a6795a868be3 
 
 
-##Aplicación
+## Aplicación
 La aplicación está conformada por un menú principal (archivo [menú_inicio.py](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_inicio.py)), donde se puede seleccionar la opción que desea realizar el usuario. Cada opción tiene creada su función de modularización ([menú_reserva.py ](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_reserva.py) y [menú_usuario.py](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_usuario.py)) donde se realizaran todas las acciones que corresponden a la misma. en la función de reserva se podra realizar el alta, la baja, la modificación y la eliminación de la reserva. En la función de usuario se podra modificar los datos del mismo.
 
 https://github.com/Pablitoxx/ISPC-Proy-Int-G18/tree/main/reservaRestaurante
