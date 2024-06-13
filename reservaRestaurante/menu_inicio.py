@@ -10,7 +10,6 @@ while True:
     ingreso_usuario = input("¿Esta usted registrado?  si/no: ")
     if ingreso_usuario == "no":
         modulo_usuario.registro_usuario()
-        break
     elif ingreso_usuario == "si":
         modulo_usuario.ingreso_usuario()
 
