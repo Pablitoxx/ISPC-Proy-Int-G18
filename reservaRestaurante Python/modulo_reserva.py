@@ -58,8 +58,30 @@ def mostrar_reservas():
 
  # Modifica una reserva hecha
 def modificar_reserva():
-    print("Modulo de modificación de reserva")
+    reserva_id= input("\n Ingrese el id de la reserva a modificar: ")
+    if (consulta_reserva(reserva_id)):
+       
+        fecha = input("Ingrese nueva fecha:  (DD-MM-AAAA)  ")
+        fecha_formateada = datetime.strptime(fecha, '%d-%m-%Y').strftime('%Y-%m-%d') # transforma el formato de la para poder insertarla en la tabla
 
+        hora = input("Ingrese la nueva Hora:   (HH:MM) ")
+        if len(hora) == 5: # le agrega el SS al formato hora
+            hora += ":00"
+        hora_formateada = datetime.strptime(hora, '%H:%M:%S').strftime('%H:%M:%S')  # transforma el formato de hora para poder insertarla en la tabla
+
+        usuario_id = input("ingrese su ID de Uruario: ")
+
+        buscar_restaurante.mostrar_restaurantes()
+        restaurante_id = input("\n Por favor ingrese el id del nuevo restaurante que desea:  ")
+
+        query = "UPDATE Reserva SET fecha = %s, hora = %s, usuario_id = %s, restaurante_id = %s"
+        values = (fecha_formateada, hora_formateada, usuario_id, restaurante_id)
+        
+        conexionBD.cursor.execute(query, values)
+        conexionBD.conn.commit()
+        print(format("\n \033[1;32m"+ "La reserva id" + reserva_id + " tus datos se han actualizado con éxito." + "\033[0;m",'^50'))
+    else:
+        print(f"El ID {reserva_id} NO EXISTE por lo tanto no se puede modificar ")
  # Elimina reserva ya cargada
 def cancelar_reserva():
     print("Modulo de cancelación de reserva")
