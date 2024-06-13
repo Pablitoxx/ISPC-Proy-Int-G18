@@ -71,7 +71,7 @@ def modificar_reserva():
 
         usuario_id = input("ingrese su ID de Uruario: ")
 
-        buscar_restaurante.mostrar_restaurantes()
+        modulo_restaurante.mostrar_restaurantes()
         restaurante_id = input("\n Por favor ingrese el id del nuevo restaurante que desea:  ")
 
         query = "UPDATE Reserva SET fecha = %s, hora = %s, usuario_id = %s, restaurante_id = %s"
