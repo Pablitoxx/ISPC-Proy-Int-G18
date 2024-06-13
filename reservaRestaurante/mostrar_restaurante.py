@@ -6,6 +6,11 @@ def mostrar_restaurantes():
     conexionBD.cursor.execute(query)
     restos = conexionBD.cursor.fetchall()
     
+    nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # muestra nombres de columnas
+    formato = "{:<25}" * len(nombres_columnas) 
+
+    print(formato.format(*nombres_columnas))
+    print("-" * 25 * len(nombres_columnas))
     if restos:
         for resto in restos:
-            print(resto)
+            print(formato.format(*resto))

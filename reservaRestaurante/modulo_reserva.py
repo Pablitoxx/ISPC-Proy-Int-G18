@@ -1,5 +1,5 @@
 import conexionBD
-import buscar_restaurante
+import mostrar_restaurante
 from datetime import datetime
 
  # Realización de reserva
@@ -13,9 +13,9 @@ def reserva():
         hora += ":00"
     hora_formateada = datetime.strptime(hora, '%H:%M:%S').strftime('%H:%M:%S')  # transforma el formato de hora para poder insertarla en la tabla
 
-    usuario_id = input("ingrese su ID de Uruario: \n")
+    usuario_id = input("ingrese su ID de Uruario: ")
 
-    buscar_restaurante.mostrar_restaurantes()
+    mostrar_restaurante.mostrar_restaurantes()
     restaurante_id = input("\n Por favor ingrese el id del restaurante que desea:  ")
     
     query = "INSERT INTO Reserva(fecha, hora, usuario_id, restaurante_id) VALUES (%s, %s, %s, %s)"

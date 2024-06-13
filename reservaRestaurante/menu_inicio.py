@@ -4,7 +4,6 @@ import modulo_usuario
 import mysql.connector
 
  # login
-
 while True:
     print ("Bienvenido")
     ingreso_usuario = input("¿Esta usted registrado?  si/no: ")
@@ -25,7 +24,8 @@ while True:
         print("4- Cancelar reserva")
         print("5- Modificar datos Usuario")
         print("6- Eliminar Usuario")
-        print("7- Salir")
+        print("7- Mostrar Usuarios")
+        print("8- Salir")
         print("-" * 40)
         menu_opcion= (input("Escribe la opción que desea escoger: "))
         print("-" * 40)
@@ -54,6 +54,9 @@ while True:
                 print(format("Eliminar usuario \n",'^40'))
                 modulo_usuario.eliminar_usuario()
             case "7":
+                print(format("Mostrar usuarios registrados \n",'^40'))
+                modulo_usuario.mostrar_usuarios()
+            case "8":
                 print(format("\033[1;32m"+"Hasta pronto!" + "\033[0;m",'^50'))
                 break
             case _:

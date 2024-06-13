@@ -18,19 +18,19 @@ def registro_usuario():
  # Ingreso del usuario a la app
 
 def ingreso_usuario():
-    email = input("Por favor ingrese su correo electronico: ")
-    password = input("Ingrese su contraseña: ")
-    query = "SELECT * FROM Usuarios WHERE email = %s and contraseña = %s "
-    values = (email,password)
-    conexionBD.cursor.execute(query,values)
-    usuario_Unico = conexionBD.cursor.fetchone()
+    while True:
+        email = input("Por favor ingrese su correo electronico: ")
+        password = input("Ingrese su contraseña: ")
+        query = "SELECT * FROM Usuarios WHERE email = %s and contraseña = %s "
+        values = (email,password)
+        conexionBD.cursor.execute(query,values)
+        usuario_Unico = conexionBD.cursor.fetchone()
 
-    if(conexionBD.cursor.rowcount == 1):
-        print ("\n Su Id de usuario es: ",usuario_Unico[0])
-        return True
-    else:
-        print(f"\n email o contrasaeña incorrectos")
-        return False
+        if(conexionBD.cursor.rowcount == 1):
+            print ("\n Su Id de usuario es: ",usuario_Unico[0])
+            return True
+        else:
+            print(f"\n email o contrasaeña incorrectos")
     
  # Modificación de datos de usuario
 def modificar_usuario():
@@ -46,25 +46,26 @@ def modificar_usuario():
         
         conexionBD.cursor.execute(query, values)
         conexionBD.conn.commit()
-        #print(f"\n {nombre} tus datos se han actualizado con éxito.")
         print(format("\n \033[1;32m"+ nombre + " tus datos se han actualizado con éxito." + "\033[0;m",'^50'))
     else:
         print(f"El ID {usuario_id} NO EXISTE por lo tanto no se puede modificar ")
 
  # Eliminar usuario
 def eliminar_usuario():
-    usuario_id = input("Ingrese el id del usuario a eliminar: ")
+    while True:
+        usuario_id = input("Ingrese el id del usuario a eliminar: ")
 
-    if(buscar_usuario(usuario_id)):
-        query = "DELETE FROM Usuarios WHERE usuario_id = %s"
-        values = (usuario_id,)
+        if(buscar_usuario(usuario_id)):
+            query = "DELETE FROM Usuarios WHERE usuario_id = %s"
+            values = (usuario_id,)
         
-        conexionBD.cursor.execute(query, values)
-        conexionBD.conn.commit()
+            conexionBD.cursor.execute(query, values)
+            conexionBD.conn.commit()
         
-        print(format("\n \033[1;31m"+"Usuario con Id: " + usuario_id + " ha sido eliminado con exito" + "\033[0;m",'^50'))
-    else:
-        print(f"Persona con ID {usuario_id} NO EXISTE por lo tanto no puede ser eliminada.")
+            print(format("\n \033[1;31m"+"El usuario con Id " + usuario_id + " ha sido eliminado con exito" + "\033[0;m",'^50'))
+            return True
+        else:
+            print(f"Persona con ID {usuario_id} NO EXISTE por lo tanto no puede ser eliminada.")
 
 
  # Busqueda de usuario 
@@ -74,11 +75,25 @@ def buscar_usuario(usuario_id):
     conexionBD.cursor.execute(query,values)
     usuario_Unico = conexionBD.cursor.fetchone()
 
-    print(conexionBD.cursor.rowcount, "Datos del usuario \n")
-
     if(conexionBD.cursor.rowcount == 1):
         print(usuario_Unico)
         return True
     else:
         print("Usuario inexistente")
         return False
+
+    # Muestra los usuarios registrados
+def mostrar_usuarios():
+    query = "SELECT * FROM Usuarios"
+    conexionBD.cursor.execute(query)
+    usuarios = conexionBD.cursor.fetchall()
+
+    nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # muestra nombres de columnas
+    formato = "{:<25}" * len(nombres_columnas) 
+
+    print(formato.format(*nombres_columnas))
+    print("-" * 25 * len(nombres_columnas))
+    if usuarios:
+        for usuario in usuarios:
+            print(formato.format(*usuario))
+            
