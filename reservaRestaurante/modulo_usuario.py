@@ -15,8 +15,8 @@ def registro_usuario():
     conexionBD.conn.commit() #Es necesario realizar el commit(); de lo contrario, no se realizan cambios en la tabla 
     print("Usuario creado con exito")
 
- # Ingreso del usuario a la app
 
+ # Ingreso del usuario a la app
 def ingreso_usuario():
     while True:
         email = input("Por favor ingrese su correo electronico: ")
@@ -31,8 +31,9 @@ def ingreso_usuario():
             return True
         else:
             print(f"\n email o contrasaeña incorrectos")
-    
- # Modificación de datos de usuario
+
+
+ # Modifica los datos de usuario
 def modificar_usuario():
     usuario_id= input("Ingrese el id del usuario a modificar: ")
     if (buscar_usuario(usuario_id)):
@@ -50,7 +51,8 @@ def modificar_usuario():
     else:
         print(f"El ID {usuario_id} NO EXISTE por lo tanto no se puede modificar ")
 
- # Eliminar usuario
+
+ # Elimina usuario existente (solo los que no tienen ninguna reserva realizada)
 def eliminar_usuario():
     while True:
         usuario_id = input("Ingrese el id del usuario a eliminar: ")
@@ -68,7 +70,7 @@ def eliminar_usuario():
             print(f"Persona con ID {usuario_id} NO EXISTE por lo tanto no puede ser eliminada.")
 
 
- # Busqueda de usuario 
+ # Busqueda un usuario por su id 
 def buscar_usuario(usuario_id):
     query = "SELECT * FROM Usuarios WHERE usuario_id = %s"
     values = (usuario_id,)
@@ -82,7 +84,8 @@ def buscar_usuario(usuario_id):
         print("Usuario inexistente")
         return False
 
-    # Muestra los usuarios registrados
+
+# Muestra los usuarios registrados
 def mostrar_usuarios():
     query = "SELECT * FROM Usuarios"
     conexionBD.cursor.execute(query)

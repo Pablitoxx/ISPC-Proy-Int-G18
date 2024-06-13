@@ -3,7 +3,7 @@ import modulo_reserva
 import modulo_usuario
 import mysql.connector
 
- # login
+ # menu registro y login de usuario
 while True:
     print ("Bienvenido")
     ingreso_usuario = input("¿Esta usted registrado?  si/no: ")
@@ -20,12 +20,13 @@ while True:
         print("Seleccione la opcion que desee: \n")
         print("1- Reservar mesa")
         print("2- Consultar reserva")
-        print("3- Modificar reserva")
-        print("4- Cancelar reserva")
-        print("5- Modificar datos Usuario")
-        print("6- Eliminar Usuario")
-        print("7- Mostrar Usuarios")
-        print("8- Salir")
+        print("3- Mostrar reserva")
+        print("4- Modificar reserva")
+        print("5- Cancelar reserva")
+        print("6- Modificar datos Usuario")
+        print("7- Eliminar Usuario")
+        print("8- Mostrar Usuarios")
+        print("9- Salir")
         print("-" * 40)
         menu_opcion= (input("Escribe la opción que desea escoger: "))
         print("-" * 40)
@@ -40,23 +41,26 @@ while True:
                 cod_res= int (input("Ingrese el codigo de reserva:  "))
                 consulta_res= modulo_reserva.consulta_reserva()
             case "3":
+                print(format("Mostrar reservas \n",'^40'))
+                modulo_reserva.mostrar_reservas()
+            case "4":
                 print(format("Modifica tu reserva \n",'^40'))
                 cod_res= int (input("Ingrese el codigo de reserva:  "))
                 mod_reserva= modulo_reserva.modific_reserva()
-            case "4":
+            case "5":
                 print(format("Cancelar reserva \n",'^40'))
                 cod_res= int (input("Ingrese el codigo de reserva que desea cancelar:  "))
                 modulo_reserva.cancelar_reserva()
-            case "5":
+            case "6":
                 print(format("Modificar datos de usuario \n",'^40'))
                 modulo_usuario.modificar_usuario()
-            case "6":
+            case "7":
                 print(format("Eliminar usuario \n",'^40'))
                 modulo_usuario.eliminar_usuario()
-            case "7":
+            case "8":
                 print(format("Mostrar usuarios registrados \n",'^40'))
                 modulo_usuario.mostrar_usuarios()
-            case "8":
+            case "9":
                 print(format("\033[1;32m"+"Hasta pronto!" + "\033[0;m",'^50'))
                 break
             case _:

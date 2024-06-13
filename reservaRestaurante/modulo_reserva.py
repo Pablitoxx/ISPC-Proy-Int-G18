@@ -1,5 +1,5 @@
 import conexionBD
-import mostrar_restaurante
+import modulo_restaurante
 from datetime import datetime
 
  # Realización de reserva
@@ -15,7 +15,7 @@ def reserva():
 
     usuario_id = input("ingrese su ID de Uruario: ")
 
-    mostrar_restaurante.mostrar_restaurantes()
+    modulo_restaurante.mostrar_restaurantes()
     restaurante_id = input("\n Por favor ingrese el id del restaurante que desea:  ")
     
     query = "INSERT INTO Reserva(fecha, hora, usuario_id, restaurante_id) VALUES (%s, %s, %s, %s)"
@@ -26,13 +26,20 @@ def reserva():
     print(format("\n \033[1;32m"+"Reserva realizada con exito!" + "\033[0;m",'^50'))
 
 
+
+ # Consulta de una reserva
 def consulta_reserva():
     print ("Modulo consulta reserva")
 
+ # Muestra de reservas realizadas
+def mostrar_reservas():
+    print("mostrar reservas")
 
+ # Modifica una reserva hecha
 def modific_reserva():
     print("Modulo de modificación de reserva")
 
+ # Elimina reserva ya cargada
 def cancelar_reserva():
     print("Modulo de cancelación de reserva")
 
