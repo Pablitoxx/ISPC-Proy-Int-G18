@@ -38,18 +38,15 @@ while True:
                 modulo_reserva.reserva()
             case "2":
                 print(format("Consulta tu reserva \n",'^40'))
-                cod_res= int (input("Ingrese el codigo de reserva:  "))
                 consulta_res= modulo_reserva.consulta_reserva()
             case "3":
                 print(format("Mostrar reservas \n",'^40'))
                 modulo_reserva.mostrar_reservas()
             case "4":
                 print(format("Modifica tu reserva \n",'^40'))
-                cod_res= int (input("Ingrese el codigo de reserva:  "))
-                mod_reserva= modulo_reserva.modific_reserva()
+                mod_reserva= modulo_reserva.modificar_reserva()
             case "5":
                 print(format("Cancelar reserva \n",'^40'))
-                cod_res= int (input("Ingrese el codigo de reserva que desea cancelar:  "))
                 modulo_reserva.cancelar_reserva()
             case "6":
                 print(format("Modificar datos de usuario \n",'^40'))

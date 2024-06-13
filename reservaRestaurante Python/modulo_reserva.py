@@ -36,7 +36,7 @@ def mostrar_reservas():
     print("mostrar reservas")
 
  # Modifica una reserva hecha
-def modific_reserva():
+def modificar_reserva():
     print("Modulo de modificación de reserva")
 
  # Elimina reserva ya cargada
