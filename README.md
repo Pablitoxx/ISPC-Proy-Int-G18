@@ -121,15 +121,19 @@ Algoritmo menu_reserva
 finalgoritmo
 
 
-https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/MenuReservaRestaurant.psc
+https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservsRestaurante%20pseudocodigo/MenuReservaRestaurant.psc
 
 
 ## Diagrama Entidad Relación (Notación de Chen. Convenciones vistas en la presentación utilizada en los contenidos del aula)
 
-https://github.com/Pablitoxx/ISPC-Proy-Int-G18/assets/114536477/b3524bfe-40b1-4eec-8e30-a6795a868be3 
+https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/bdReservaRestaurante/Modelo%20E-R%20v2.png
 
 
 ## Aplicación
-La aplicación está conformada por un menú principal (archivo [menú_inicio.py](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_inicio.py)), donde se puede seleccionar la opción que desea realizar el usuario. Cada opción tiene creada su función de modularización ([menú_reserva.py ](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_reserva.py) y [menú_usuario.py](https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante/menu_usuario.py)) donde se realizaran todas las acciones que corresponden a la misma. en la función de reserva se podra realizar el alta, la baja, la modificación y la eliminación de la reserva. En la función de usuario se podra modificar los datos del mismo.
+La aplicación está conformada por un menú principal, al que se accede mediante un logueo de usuario. Si el usuario no está registrado en la aplicación, debe registrarse, de lo contrario deberá ingresar con su email y contraseña. El registro e inicio de sesión se encuentran en el módulo de usuario (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_usuario.py)
 
-https://github.com/Pablitoxx/ISPC-Proy-Int-G18/tree/main/reservaRestaurante
+Ya dentro del menú, se pueden realizar diferentes consultas. Las referidas a la modificación, consulta y eliminación de usuario se encuentran en el modulo de usuario  (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_usuario.py). Una aclaración importante en cuanto a la eliminación de usuarios, es que como restricción solo se podrá eliminar usuarios que no tengan reservas ya realizadas. Esto se debe a que se desea tener un registro de las reservas de los usuarios para futuros reportes estadísticos.
+
+En lo referido a las reservas se podrá realizar el alta, la consulta, la modificación y la eliminación de las mismas. Estas se encuentran en el módulo de reserva (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_reserva.py). En la opción de realizar una reserva también utiliza el módulo restaurante (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_restaurante.py) para poder visualizar los mismos, así el usuario puede elegir el que guste. 
+
+https://github.com/Pablitoxx/ISPC-Proy-Int-G18/tree/main/reservaRestaurante%20Python
