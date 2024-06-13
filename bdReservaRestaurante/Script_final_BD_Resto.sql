@@ -107,6 +107,16 @@ VALUES  ('Bohemia Mexican', 'Av Pueyrredon', 1345, 'Mexicana'),
         ('Bohemia Grill', 'Rafael Nuñez', 3248, 'Parrilla'),
         ('Bohemia Fish & Shellfish', 'Sucre', 2504, 'Pescado y Marisco');
 
+INSERT INTO mesa (capacidad, disponibilidad, restaurante_id)
+VALUES  (2, 1, 1), (4, 1, 1), (5, 1, 1), (6, 1, 1),
+        (2, 1, 2), (4, 1, 2), (5, 1, 2), (6, 1, 2),
+        (2, 1, 3), (4, 1, 3), (5, 1, 3), (6, 1, 3),
+        (2, 1, 4), (4, 1, 4), (5, 1, 4), (6, 1, 4),
+        (2, 1, 5), (4, 1, 5), (5, 1, 5), (6, 1, 5),
+        (2, 1, 6), (4, 1, 6), (5, 1, 6), (6, 1, 6),
+        (2, 1, 7), (4, 1, 7), (5, 1, 7), (6, 1, 7),
+        (2, 1, 8), (4, 1, 8), (5, 1, 8), (6, 1, 8);
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
