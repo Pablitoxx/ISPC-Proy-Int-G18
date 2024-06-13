@@ -28,8 +28,29 @@ def reserva():
 
 
  # Consulta de una reserva
-def consulta_reserva():
-    print ("Modulo consulta reserva")
+def consulta_reserva(reserva_id):
+    query = "select us.apellido, us.nombre,r.fecha, r.hora,  res.nombre, res.tipo_de_comida as tipoComida, res.calle as Direccion, res.numero from reserva r inner join usuarios us  on r.usuario_id = us.usuario_id inner join restaurante res on r.restaurante_id = res.restaurante_id WHERE reserva_id = %s"
+ 
+    values = (reserva_id,)
+    conexionBD.cursor.execute(query,values)
+    reserva_Unica = conexionBD.cursor.fetchone()
+
+    if(conexionBD.cursor.rowcount == 1):
+        nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # para mostrar nombres de columnas
+        formato = "{:<25}" * len(nombres_columnas) 
+        formato = "{:<15} {:<15} {:<15} {:<11} {:<16} {:<15} {:<15} {:<15}"
+        print(formato.format(*nombres_columnas))
+        print("-" * 20 * len(nombres_columnas))
+        
+        fecha_formateada = reserva_Unica[2].strftime('%Y-%m-%d')
+        tiempo_formateado = str(reserva_Unica[3])
+        print(formato.format(reserva_Unica[0], reserva_Unica[1], fecha_formateada, tiempo_formateado, reserva_Unica[4], reserva_Unica[5], reserva_Unica[6], reserva_Unica[7]))
+        #print(formato.format(reserva_Unica[0], fecha_formateada, tiempo_formateado, reserva_Unica[3], reserva_Unica[4]))
+       
+        return True
+    else:
+        print("Usuario inexistente")
+        return False
 
  # Muestra de reservas realizadas
 def mostrar_reservas():
