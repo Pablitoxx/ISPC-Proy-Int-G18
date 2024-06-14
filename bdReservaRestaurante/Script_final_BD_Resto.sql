@@ -125,10 +125,10 @@ VALUES  (1,'2024-06-13','08:00:00',1,2),
 (8,'2024-06-13','15:00:00',1,3);
 
 INSERT INTO `usuarios` (usuario_id, email, contraseña, Nombre, Apellido, Telefono)
-VALUES (1,'pabblloocanno@gmail.com','pablo1','Pablo','Ocaño',2147483647),
-(2,'soledad.caudana@gmail.com','sole1','Soledad','Caudana',2147483647),
-(3,'fernandopajon06@gmail.com','fer1','Fernando','Pajon',2147483647),
-(4,'nachobressanini1@gmail.com','nacho1','Ignacio ','Bressanini',2147483647);
+VALUES (1,'pabblloocanno@gmail.com','pablo1','Pablo','Ocaño',2147483648),
+(2,'soledad.caudana@gmail.com','sole1','Soledad','Caudana',2147483649),
+(3,'fernandopajon06@gmail.com','fer1','Fernando','Pajon',2147483640),
+(4,'nachobressanini1@gmail.com','nacho1','Ignacio ','Bressanini',2147483641);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
