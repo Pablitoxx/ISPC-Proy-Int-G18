@@ -44,8 +44,6 @@ def consulta_reserva(reserva_id):
         fecha_formateada = reserva_Unica[2].strftime('%Y-%m-%d')
         tiempo_formateado = str(reserva_Unica[3])
         print(formato.format(reserva_Unica[0], reserva_Unica[1], fecha_formateada, tiempo_formateado, reserva_Unica[4], reserva_Unica[5], reserva_Unica[6], reserva_Unica[7]))
-        #print(formato.format(reserva_Unica[0], fecha_formateada, tiempo_formateado, reserva_Unica[3], reserva_Unica[4]))
-       
         return True
     else:
         print("Usuario inexistente")
@@ -93,16 +91,15 @@ def modificar_reserva():
         
         conexionBD.cursor.execute(query, values)
         conexionBD.conn.commit()
-        print(format("\n \033[1;32m"+ "La reserva id" + reserva_id + " tus datos se han actualizado con éxito." + "\033[0;m",'^50'))
+        print(format("\n \033[1;32m"+ "La reserva con id " + reserva_id + " se ha actualizado con éxito." + "\033[0;m",'^50'))
     else:
         print(f"El ID {reserva_id} NO EXISTE por lo tanto no se puede modificar ")
  
  
  # Elimina reserva ya cargada
 def cancelar_reserva():
-    print("Modulo de cancelación de reserva")
     while True:
-        reserva_id = input("Ingrese el id del usuario a eliminar: ")
+        reserva_id = input("Ingrese el id de la reserva a eliminar: ")
 
         if(consulta_reserva(reserva_id)):
             query = "DELETE FROM Reserva WHERE reserva_id = %s"
