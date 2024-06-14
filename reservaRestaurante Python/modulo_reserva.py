@@ -86,8 +86,8 @@ def modificar_reserva():
         modulo_restaurante.mostrar_restaurantes()
         restaurante_id = input("\n Por favor ingrese el id del nuevo restaurante que desea:  ")
 
-        query = "UPDATE Reserva SET fecha = %s, hora = %s, usuario_id = %s, restaurante_id = %s"
-        values = (fecha_formateada, hora_formateada, usuario_id, restaurante_id)
+        query = "UPDATE Reserva SET fecha = %s, hora = %s, usuario_id = %s, restaurante_id = %s WHERE reserva_id= %s"
+        values = (fecha_formateada, hora_formateada, usuario_id, restaurante_id, reserva_id)
         
         conexionBD.cursor.execute(query, values)
         conexionBD.conn.commit()

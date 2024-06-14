@@ -42,8 +42,8 @@ def modificar_usuario():
         apellido = input("Ingrese su nuevo apellido: ")
         telefono = input("Ingrese su nuevo teléfono: ")
 
-        query = "UPDATE Usuarios SET contraseña = %s, nombre = %s, apellido = %s, telefono = %s"
-        values = (password, nombre, apellido, telefono)
+        query = "UPDATE Usuarios SET contraseña = %s, nombre = %s, apellido = %s, telefono = %s WHERE usuario_id =%s  "
+        values = (password, nombre, apellido, telefono, usuario_id)
         
         conexionBD.cursor.execute(query, values)
         conexionBD.conn.commit()
