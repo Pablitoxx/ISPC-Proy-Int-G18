@@ -37,7 +37,7 @@ def ingreso_usuario():
 def modificar_usuario():
     usuario_id= input("Ingrese el id del usuario a modificar: ")
     if (buscar_usuario(usuario_id)):
-        password = input("Ingrese su nueva contraseña: ")
+        password = input("\n Ingrese su nueva contraseña: ")
         nombre = input("ingrese su nuevo nombre: ")
         apellido = input("Ingrese su nuevo apellido: ")
         telefono = input("Ingrese su nuevo teléfono: ")
@@ -78,8 +78,16 @@ def buscar_usuario(usuario_id):
     usuario_Unico = conexionBD.cursor.fetchone()
 
     if(conexionBD.cursor.rowcount == 1):
-        print(usuario_Unico)
+        nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # para mostrar nombres de columnas
+        formato = "{:<30}" * len(nombres_columnas) 
+        formato = "{:<15} {:<15} {:<15} {:<15} {:<15} {:<15} "
+        print(formato.format(*nombres_columnas))
+        print("-" * 20 * len(nombres_columnas))
+
+        print(formato.format(usuario_Unico[0], usuario_Unico[1], usuario_Unico[2], usuario_Unico[3], usuario_Unico[4], usuario_Unico[5]))
         return True
+        #print(usuario_Unico)
+        
     else:
         print("Usuario inexistente")
         return False

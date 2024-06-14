@@ -24,7 +24,7 @@ while True:
         print("4- Modificar reserva")
         print("5- Cancelar reserva")
         print("6- Modificar datos Usuario")
-        print("7- Eliminar Usuario")
+        print("7- Eliminar Usuario que no tenga reserva")
         print("8- Mostrar Usuarios")
         print("9- Salir")
         print("-" * 40)
@@ -53,7 +53,7 @@ while True:
                 print(format("Modificar datos de usuario \n",'^40'))
                 modulo_usuario.modificar_usuario()
             case "7":
-                print(format("Eliminar usuario \n",'^40'))
+                print(format("Eliminar usuario que aun no tenga reserva\n",'^40'))
                 modulo_usuario.eliminar_usuario()
             case "8":
                 print(format("Mostrar usuarios registrados \n",'^40'))
