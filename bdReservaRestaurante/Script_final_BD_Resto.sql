@@ -114,7 +114,7 @@ VALUES  (2, 1, 1), (4, 1, 1), (5, 1, 1), (6, 1, 1),
         (2, 1, 7), (4, 1, 7), (5, 1, 7), (6, 1, 7),
         (2, 1, 8), (4, 1, 8), (5, 1, 8), (6, 1, 8);
 
-INSERT INTO `reserva` (reserva_id, fecha, hora, usuario_id, restaurante_id)
+INSERT INTO reserva (reserva_id, fecha, hora, usuario_id, restaurante_id)
 VALUES  (1,'2024-06-13','08:00:00',1,2),
 (2,'2024-06-13','09:00:00',2,3),
 (3,'2024-06-13','10:00:00',3,4),
@@ -123,6 +123,12 @@ VALUES  (1,'2024-06-13','08:00:00',1,2),
 (6,'2024-06-13','13:00:00',6,4),
 (7,'2024-06-13','14:00:00',7,1),
 (8,'2024-06-13','15:00:00',8,3);
+
+INSERT INTO usuarios (usuario_id, email, Nombre, Apellido, telefono)
+VALUES ('1', 'pabblloocanno@gmail.com', 'Pablo', 'Ocaño', '3516772294'),
+('2', 'soledad.caudana@gmail.com', 'Soledad', 'Caudana', '3571547675'),
+('3', 'fernandopajon06@gmail.com', 'Fernando', 'Pajon', '3512834709'),
+('4', 'nachobressanini1@gmail.com', 'Ignacio ', 'Bressanini', '3512513151');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
