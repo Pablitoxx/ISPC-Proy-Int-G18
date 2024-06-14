@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `reserva_rest`.`mesa` (
     FOREIGN KEY (`restaurante_id`)
     REFERENCES `reserva_rest`.`restaurante` (`restaurante_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 33
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `reserva_rest`.`usuarios` (
   UNIQUE INDEX `Nombre` (`Nombre` ASC) ,
   UNIQUE INDEX `Apellido` (`Apellido` ASC) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `reserva_rest`.`reserva` (
     FOREIGN KEY (`usuario_id`)
     REFERENCES `reserva_rest`.`usuarios` (`usuario_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
 
 select * from reserva;
@@ -99,7 +99,7 @@ select * from mesa;
 
 INSERT INTO restaurante (nombre, calle, numero, tipo_de_comida)
 VALUES  ('Bohemia Mexican', 'Av Pueyrredon', 1345, 'Mexicana'),
-		('Bohemia Chinese', 'Gral Paz', 72, 'China'),
+	('Bohemia Chinese', 'Gral Paz', 72, 'China'),
         ('Bohemia Arabian', 'Av 24 de Septiebre', 791, 'Arabe'),
         ('Bohemia Burguer', 'Obispo Trejo', 1200, 'Hamburguesa'),
         ('Bohemia Italian', 'Av Colon', 2840, 'Italiana'),
@@ -117,6 +117,15 @@ VALUES  (2, 1, 1), (4, 1, 1), (5, 1, 1), (6, 1, 1),
         (2, 1, 7), (4, 1, 7), (5, 1, 7), (6, 1, 7),
         (2, 1, 8), (4, 1, 8), (5, 1, 8), (6, 1, 8);
 
+INSERT INTO `reserva` (reserva_id, fecha, hora, usuario_id, restaurante_id)
+VALUES  (1,'2024-06-13','08:00:00',1,2),
+(2,'2024-06-13','09:00:00',2,3),
+(3,'2024-06-13','10:00:00',3,4),
+(4,'2024-06-13','11:00:00',4,5),
+(5,'2024-06-13','12:00:00',5,2),
+(6,'2024-06-13','13:00:00',6,4),
+(7,'2024-06-13','14:00:00',7,1),
+(8,'2024-06-13','15:00:00',8,3);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
