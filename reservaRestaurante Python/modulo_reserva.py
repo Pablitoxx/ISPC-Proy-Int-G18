@@ -88,6 +88,20 @@ def modificar_reserva():
  # Elimina reserva ya cargada
 def cancelar_reserva():
     print("Modulo de cancelación de reserva")
+    while True:
+        reserva_id = input("Ingrese el id del usuario a eliminar: ")
+
+        if(consulta_reserva(reserva_id)):
+            query = "DELETE FROM Reserva WHERE reserva_id = %s"
+            values = (reserva_id,)
+        
+            conexionBD.cursor.execute(query, values)
+            conexionBD.conn.commit()
+        
+            print(format("\n \033[1;31m"+"La reserva con Id " + reserva_id + " ha sido eliminado con exito" + "\033[0;m",'^50'))
+            return True
+        else:
+            print(f"Persona con ID {reserva_id} NO EXISTE por lo tanto no puede ser eliminada.")
 
 
 
