@@ -20,7 +20,7 @@ while True:
         print("Seleccione la opcion que desee: \n")
         print("1- Reservar mesa")
         print("2- Consultar reserva")
-        print("3- Mostrar reserva")
+        print("3- Mostrar reservas")
         print("4- Modificar reserva")
         print("5- Cancelar reserva")
         print("6- Modificar datos Usuario")

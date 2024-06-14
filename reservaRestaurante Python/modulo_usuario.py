@@ -92,10 +92,10 @@ def mostrar_usuarios():
     usuarios = conexionBD.cursor.fetchall()
 
     nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # muestra nombres de columnas
-    formato = "{:<25}" * len(nombres_columnas) 
+    formato = "{:<30}" * len(nombres_columnas) 
 
     print(formato.format(*nombres_columnas))
-    print("-" * 25 * len(nombres_columnas))
+    print("-" * 27 * len(nombres_columnas))
     if usuarios:
         for usuario in usuarios:
             print(formato.format(*usuario))
