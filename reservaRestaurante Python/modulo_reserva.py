@@ -30,7 +30,6 @@ def reserva():
  # Consulta de una reserva
 def consulta_reserva(reserva_id):
     query = "select us.apellido, us.nombre,r.fecha, r.hora,  res.nombre, res.tipo_de_comida as tipoComida, res.calle as Direccion, res.numero from reserva r inner join usuarios us  on r.usuario_id = us.usuario_id inner join restaurante res on r.restaurante_id = res.restaurante_id WHERE reserva_id = %s"
- 
     values = (reserva_id,)
     conexionBD.cursor.execute(query,values)
     reserva_Unica = conexionBD.cursor.fetchone()
@@ -52,9 +51,11 @@ def consulta_reserva(reserva_id):
         print("Usuario inexistente")
         return False
 
+
  # Muestra de reservas realizadas
 def mostrar_reservas():
     print("mostrar reservas")
+
 
  # Modifica una reserva hecha
 def modificar_reserva():
@@ -82,6 +83,8 @@ def modificar_reserva():
         print(format("\n \033[1;32m"+ "La reserva id" + reserva_id + " tus datos se han actualizado con éxito." + "\033[0;m",'^50'))
     else:
         print(f"El ID {reserva_id} NO EXISTE por lo tanto no se puede modificar ")
+ 
+ 
  # Elimina reserva ya cargada
 def cancelar_reserva():
     print("Modulo de cancelación de reserva")

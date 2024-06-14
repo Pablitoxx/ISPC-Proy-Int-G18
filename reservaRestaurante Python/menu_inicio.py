@@ -38,7 +38,8 @@ while True:
                 modulo_reserva.reserva()
             case "2":
                 print(format("Consulta tu reserva \n",'^40'))
-                consulta_res= modulo_reserva.consulta_reserva()
+                consulta_reserva= int (input("Ingrese el codigo de reserva:  "))
+                modulo_reserva.consulta_reserva(consulta_reserva)
             case "3":
                 print(format("Mostrar reservas \n",'^40'))
                 modulo_reserva.mostrar_reservas()
