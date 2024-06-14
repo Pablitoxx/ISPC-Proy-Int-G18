@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `reserva_rest`.`restaurante` (
   `tipo_de_comida` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`restaurante_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 9
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
 
 
