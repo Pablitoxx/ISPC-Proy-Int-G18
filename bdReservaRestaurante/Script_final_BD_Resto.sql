@@ -94,9 +94,6 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
 
-select * from reserva;
-select * from mesa;
-
 INSERT INTO restaurante (nombre, calle, numero, tipo_de_comida)
 VALUES  ('Bohemia Mexican', 'Av Pueyrredon', 1345, 'Mexicana'),
 	('Bohemia Chinese', 'Gral Paz', 72, 'China'),
