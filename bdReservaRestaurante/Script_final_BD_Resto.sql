@@ -64,9 +64,8 @@ CREATE TABLE IF NOT EXISTS `reserva_rest`.`usuarios` (
   `Apellido` VARCHAR(45) NULL DEFAULT NULL,
   `telefono` INT(20) NOT NULL,
   PRIMARY KEY (`usuario_id`),
-  UNIQUE INDEX `email` (`email` ASC) ,
-  UNIQUE INDEX `Nombre` (`Nombre` ASC) ,
-  UNIQUE INDEX `Apellido` (`Apellido` ASC) )
+  UNIQUE INDEX `email` (`email` ASC)
+ )
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4;
