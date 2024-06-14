@@ -119,16 +119,16 @@ VALUES  (1,'2024-06-13','08:00:00',1,2),
 (2,'2024-06-13','09:00:00',2,3),
 (3,'2024-06-13','10:00:00',3,4),
 (4,'2024-06-13','11:00:00',4,5),
-(5,'2024-06-13','12:00:00',5,2),
-(6,'2024-06-13','13:00:00',6,4),
-(7,'2024-06-13','14:00:00',7,1),
-(8,'2024-06-13','15:00:00',8,3);
+(5,'2024-06-13','12:00:00',2,2),
+(6,'2024-06-13','13:00:00',3,4),
+(7,'2024-06-13','14:00:00',4,1),
+(8,'2024-06-13','15:00:00',1,3);
 
-INSERT INTO usuarios (usuario_id, email, Nombre, Apellido, telefono)
-VALUES ('1', 'pabblloocanno@gmail.com', 'Pablo', 'Ocaño', '3516772294'),
-('2', 'soledad.caudana@gmail.com', 'Soledad', 'Caudana', '3571547675'),
-('3', 'fernandopajon06@gmail.com', 'Fernando', 'Pajon', '3512834709'),
-('4', 'nachobressanini1@gmail.com', 'Ignacio ', 'Bressanini', '3512513151');
+INSERT INTO `usuarios` (usuario_id, email, contraseña, Nombre, Apellido, Telefono)
+VALUES (1,'pabblloocanno@gmail.com','pablo1','Pablo','Ocaño',2147483647),
+(2,'soledad.caudana@gmail.com','sole1','Soledad','Caudana',2147483647),
+(3,'fernandopajon06@gmail.com','fer1','Fernando','Pajon',2147483647),
+(4,'nachobressanini1@gmail.com','nacho1','Ignacio ','Bressanini',2147483647);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
