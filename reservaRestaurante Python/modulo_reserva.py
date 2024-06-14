@@ -54,7 +54,20 @@ def consulta_reserva(reserva_id):
 
  # Muestra de reservas realizadas
 def mostrar_reservas():
-    print("mostrar reservas")
+    query = "select us.apellido, us.nombre,r.fecha, r.hora,  res.nombre, res.tipo_de_comida as tipoComida, res.calle as Direccion, res.numero from reserva r inner join usuarios us  on r.usuario_id = us.usuario_id inner join restaurante res on r.restaurante_id = res.restaurante_id"
+    conexionBD.cursor.execute(query)
+    reservas = conexionBD.cursor.fetchall()
+
+    nombres_columnas = [descripcion[0] for descripcion in conexionBD.cursor.description] # para mostrar nombres de columnas
+    formato = "{:<25}" * len(nombres_columnas) 
+    formato = "{:<15} {:<15} {:<15} {:<11} {:<16} {:<15} {:<15} {:<15}"
+    
+    print(formato.format(*nombres_columnas))
+    print("-" * 20 * len(nombres_columnas))
+    for reserva in reservas:
+        fecha_formateada = reserva[2].strftime('%Y-%m-%d')
+        tiempo_formateado = str(reserva[3])
+        print(formato.format(reserva[0], reserva[1], fecha_formateada, tiempo_formateado, reserva[4], reserva[5], reserva[6], reserva[7]))
 
 
  # Modifica una reserva hecha
