@@ -136,4 +136,18 @@ Ya dentro del menú, se pueden realizar diferentes consultas. Las referidas a la
 
 En lo referido a las reservas se podrá realizar el alta, la consulta, la modificación y la eliminación de las mismas. Estas se encuentran en el módulo de reserva (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_reserva.py). En la opción de realizar una reserva también utiliza el módulo restaurante (https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/reservaRestaurante%20Python/modulo_restaurante.py) para poder visualizar los mismos, así el usuario puede elegir el que guste. 
 
-https://github.com/Pablitoxx/ISPC-Proy-Int-G18/tree/main/reservaRestaurante%20Python
+Carpeta app https://github.com/Pablitoxx/ISPC-Proy-Int-G18/tree/main/reservaRestaurante%20Python
+
+Agregar en https://github.com/Pablitoxx/ISPC-Proy-Int-G18/blob/main/bdReservaRestaurante/Script_final_BD_Resto.sql los datos de la conexión que tengan a mysql (usuario, clave y nombre de base de datos).
+
+Más información sobre Python y MySQL: [https://www.w3schools.com/python/python_mysql_getstarted.asp] (https://www.w3schools.com/python/python_mysql_getstarted.asp)
+
+
+
+## ¿Qué se necesita instalar?
+Además de ya tener instalado Python y MySQL, deberán instalar el driver de MySQL para Python.
+
+Para instalar el driver deben ejecutar por linea de comandos en el terminal:
+
+**python -m pip install mysql-connector-python**
+
